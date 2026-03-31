@@ -7,7 +7,7 @@ import json
 
 app = FastAPI()
 
-API_KEY = "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"
+API_KEY = "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"
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
