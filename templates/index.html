@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi AI Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multi AI Chat System</h1>
+
+        <select id="model">
+            <option value="google/gemini-2.0-flash-001">Gemini</option>
+            <option value="openai/gpt-3.5-turbo">GPT-3.5</option>
+            <option value="anthropic/claude-3.5-sonnet">Claude</option>
+            <option value="meta-llama/llama-3-8b-instruct">Llama</option>
+        </select>
+        
+        <input type="text" id="prompt" placeholder="Enter your question">
+
+     <div class="button-row">
+    <button onclick="askAI()">Ask AI</button>
+    <button onclick="clearHistory()">Clear Chat</button>
+    <button class="dark-btn" onclick="toggleDarkMode()">Dark Mode</button>
+</div>
+
+        <div id="response"></div>
+
+        <h2>Chat History</h2>
+        <div id="history"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

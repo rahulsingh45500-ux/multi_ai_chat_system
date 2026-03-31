@@ -1,0 +1,22 @@
+[
+    {
+        "prompt": "my name is rahul singh",
+        "model": "google/gemini-2.0-flash-001",
+        "response": "Okay, Rahul Singh. Nice to meet you! Is there anything I can help you with today?\n"
+    },
+    {
+        "prompt": "what is my name ",
+        "model": "openai/gpt-3.5-turbo",
+        "response": "Your name is Rahul Singh."
+    },
+    {
+        "prompt": "what is my name ",
+        "model": "anthropic/claude-3.5-sonnet",
+        "response": "Your name is Rahul Singh."
+    },
+    {
+        "prompt": "what is my name ",
+        "model": "meta-llama/llama-3-8b-instruct",
+        "response": "It's still: Rahul Singh"
+    }
+]
