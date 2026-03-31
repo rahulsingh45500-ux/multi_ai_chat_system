@@ -4,10 +4,12 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import requests
 import json
-
+import os 
+from dotenv import load_dotenv
+load_dotenv()
 app = FastAPI()
 
-API_KEY = "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"
+API_KEY = os.getenv("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")
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
