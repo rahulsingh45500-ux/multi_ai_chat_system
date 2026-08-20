@@ -1,90 +1,161 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #dbeafe, #f3e8ff);
     padding: 30px;
+    margin: 0;
 }
 
 .container {
     width: 60%;
     margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #4f46e5;
+    font-size: 42px;
+    text-align: center;
 }
 
-select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+h2 {
+    color: #4f46e5;
+    margin-top: 30px;
 }
 
+select,
 input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background-color: #f9fafb;
+    font-size: 15px;
+    box-sizing: border-box;
 }
 
-button {
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
-#response {
-    margin-top: 20px;
-    background: #eee;
-    padding: 15px;
-    border-radius: 5px;
-    white-space: pre-wrap;
-}
-.chat-box {
-    background: #f0f0f0;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 8px;
-}
-.model-name {
-    background-color: #333;
-    color: white;
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-.dark-mode .container {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-.dark-mode input,
-.dark-mode select {
-    background-color: #333;
-    color: white;
-    border: 1px solid #555;
-}
-
-.dark-mode #response,
-.dark-mode .chat-box {
-    background-color: #2c2c2c;
-    color: white;
-}
 .button-row {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
 }
 
+button {
+    padding: 12px 22px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.3);
+}
+
 .dark-btn {
     margin-left: auto;
+    background: linear-gradient(to right, #1f2937, #374151);
+}
+
+#response {
+    display: none;
+    margin-top: 20px;
+    background: #eef2ff;
+    padding: 18px;
+    border-radius: 10px;
+    white-space: pre-wrap;
+    border-left: 5px solid #6366f1;
+}
+
+.chat-box {
+    background: #ffffff;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 12px;
+    border-left: 6px solid #8b5cf6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.model-name {
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    color: white;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.dark-mode {
+    background: linear-gradient(to right, #111827, #1f2937);
+    color: white;
+}
+
+.dark-mode .container {
+    background-color: #1e1e2f;
+    color: white;
+}
+
+.dark-mode h1,
+.dark-mode h2 {
+    color: #a78bfa;
+}
+
+.dark-mode input,
+.dark-mode select {
+    background-color: #2d2d44;
+    color: white;
+    border: 1px solid #555;
+}
+
+.dark-mode #response,
+.dark-mode .chat-box {
+    background-color: #2a2a40;
+    color: white;
+}
+
+.dark-mode .model-name {
+    background: linear-gradient(to right, #7c3aed, #4f46e5);
+}
+#comparison-container {
+    margin-top: 20px;
+}
+
+.comparison-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.comparison-box {
+    flex: 1;
+    min-width: 250px;
+    background: #ffffff;
+    border-left: 5px solid #6366f1;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-box h3 {
+    color: #4f46e5;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.dark-mode .comparison-box {
+    background: #2a2a40;
+    color: white;
 }
